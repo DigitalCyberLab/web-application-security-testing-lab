@@ -45,12 +45,59 @@ The assessment will examine relevant security issues, including:
 - Session management issues
 - Security misconfigurations
 
-## 6. Assessment Results
+## 6. Initial Passive Scan Results
 
-Assessment results will be added after testing is completed.
+An initial passive security scan was performed using OWASP ZAP while browsing the OWASP Juice Shop application.
 
-Findings will be documented with supporting evidence, severity ratings, potential impact, and remediation recommendations.
+The scan identified **10 alerts** across three severity levels and informational observations.
 
-## 7. Conclusion
+### 6.1 Alert Summary
 
-The assessment will provide practical experience in web application security testing and vulnerability analysis using OWASP ZAP and OWASP Juice Shop.
+| Severity | Number of Alerts |
+|---|---:|
+| High | 0 |
+| Medium | 4 |
+| Low | 3 |
+| Informational | 3 |
+| **Total** | **10** |
+
+### 6.2 Medium Alerts
+
+The initial scan identified the following medium-severity alerts:
+
+- Content Security Policy (CSP) Header Not Set
+- Private IP Disclosure
+- Missing Clickjacking Protection
+- Session ID in URL
+
+### 6.3 Low Alerts
+
+The following low-severity alerts were identified:
+
+- Private IP Disclosure
+- Timestamp Disclosure
+- X-Content-Type-Options Header Missing
+
+### 6.4 Informational Alerts
+
+The scan also reported these informational observations:
+
+- Suspicious Comments
+- Modern Web Application Detected
+- Information Disclosure Through Shared Cache
+
+Informational alerts provide observations or testing recommendations and do not necessarily represent confirmed vulnerabilities.
+
+### 6.5 Initial Observations
+
+The initial passive scan identified potential security configuration weaknesses and information disclosure concerns.
+
+The alerts will be reviewed further to understand their evidence, potential impact, and appropriate remediation measures.
+
+The initial scan did not identify any high-severity alerts.
+
+### 6.6 Scan Evidence
+
+Screenshots documenting the initial scan and individual alerts are stored in the repository's `Screenshots` directory.
+
+The findings will be reassessed during subsequent testing, including authorized active scanning of the local OWASP Juice Shop application.
